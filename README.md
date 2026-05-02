@@ -1,16 +1,18 @@
 # 🎓 Student Performance Prediction System
 
-An AI-powered system that predicts student performance using Machine Learning and provides actionable insights through an interactive dashboard and API.
+A Machine Learning-based system that predicts student academic performance using behavioral and academic features such as study hours, attendance, marks, assignments, sleep patterns, and internet usage.
+The system provides a visual performance score, risk classification, and personalized recommendations through an interactive dashboard.
 
 ---
 
 ## 🚀 Features
 
-* 📊 Predict student performance using ML model
+* 📊 Predict student performance using Machine Learning
 * 📉 Risk detection (At Risk / Average / Good)
-* 📈 Interactive dashboard using Streamlit
-* ⚡ REST API built with FastAPI
-* 💡 Personalized recommendations based on inputs
+* 📈 Interactive dashboard built with Streamlit
+* ⚡ REST API using FastAPI
+* 💡 Personalized recommendations based on input data
+* 🎯 Visual gauge score for better understanding
 
 ---
 
@@ -26,12 +28,21 @@ An AI-powered system that predicts student performance using Machine Learning an
 
 ---
 
+## ⚙️ Architecture
+
+* **Streamlit** → Frontend UI for user interaction
+* **FastAPI** → Backend API for prediction serving
+* **Scikit-learn** → Machine Learning model training and inference
+* **Plotly** → Data visualization (gauge chart)
+
+---
+
 ## 📂 Project Structure
 
 ```
 Student-Performance-Prediction/
 │
-├── app.py
+├── app.py                # Streamlit UI
 ├── requirements.txt
 ├── README.md
 │
@@ -48,7 +59,7 @@ Student-Performance-Prediction/
 │   └── data_generation.py
 │
 ├── serving/
-│   └── app.py
+│   └── app.py           # FastAPI API
 │
 └── images/
     ├── api.png
@@ -56,6 +67,16 @@ Student-Performance-Prediction/
     ├── average.png
     └── performing_well.png
 ```
+
+---
+
+## 📊 How It Works
+
+1. User enters student details (study hours, attendance, etc.)
+2. Machine Learning model predicts performance
+3. A score (0–100) is calculated and displayed
+4. Performance category is shown (At Risk / Average / Good)
+5. System generates personalized recommendations
 
 ---
 
@@ -104,12 +125,12 @@ uvicorn serving.app:app --reload
 
 ---
 
-## 📈 Future Improvements
+## 🌐 Future Improvements
 
 * Use real-world dataset
 * Deploy on cloud (Streamlit Cloud / Render)
-* Add user authentication
-* Improve model accuracy with advanced algorithms
+* Add authentication system
+* Improve model accuracy with advanced ML algorithms
 
 ---
 
